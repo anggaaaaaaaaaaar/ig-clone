@@ -1,12 +1,9 @@
-import { Typography } from 'antd';
 import React from 'react';
+import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
+import { routes } from './route';
 
-function App() {
-  return (
-    <div className="bg-primary">
-      <Typography.Paragraph className="text-4xl font-bold">Welcome!!</Typography.Paragraph>
-    </div>
-  );
-}
-
-export default App;
+export const router = createBrowserRouter(
+  createRoutesFromElements(
+    routes.map((res, i) => <Route key={i} path={res.path} element={<res.element />} />)
+  )
+);
