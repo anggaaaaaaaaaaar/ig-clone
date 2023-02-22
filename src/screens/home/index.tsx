@@ -5,6 +5,7 @@ const Index: React.FunctionComponent = () => {
   return (
     <SharedComponent.Page>
       <HomeComponent.Stories />
+      <HomeComponent.ListPost />
     </SharedComponent.Page>
   );
 };

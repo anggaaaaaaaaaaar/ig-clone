@@ -5,8 +5,8 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <div className="flex justify-between px-5 py-2 h-[40px] mb-4">
-      <Typography.Text className="text-2xl">Instagram</Typography.Text>
+    <div className="flex justify-between px-5 py-2 h-[44px] bg-white z-50">
+      <Typography.Text className="text-2xl italic">Instagram</Typography.Text>
       <div className="flex space-x-3 items-center">
         <MdOutlineNotificationsNone size={20} />
         <FiSend size={20} />

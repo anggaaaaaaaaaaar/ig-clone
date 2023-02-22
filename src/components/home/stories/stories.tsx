@@ -30,10 +30,8 @@ const stories = () => {
       });
   }, []);
 
-  console.log('stories', stories);
-
   return (
-    <div className="flex overflow-x-auto space-x-3 py-3">
+    <div className="flex overflow-x-auto space-x-3 p-3">
       <Bubble item={userStory} isUser />
       {stories?.map((res: any) => (
         <Bubble key={res.id} item={res} />
