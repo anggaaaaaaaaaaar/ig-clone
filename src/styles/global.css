@@ -19,4 +19,22 @@ a {
 * {
   box-sizing: border-box;
   font-family: 'DM Sans', sans-serif !important;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-button-icon {
+  background-color: transparent;
+  /* color: #e70a09 !important; */
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-button-icon:hover {
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
 }

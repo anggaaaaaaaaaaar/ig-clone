@@ -6,7 +6,7 @@ import { FiPlusSquare } from 'react-icons/fi';
 import { RxAvatar } from 'react-icons/rx';
 import { RiMovieFill, RiMovieLine } from 'react-icons/ri';
 
-type MenuType = {
+export type MenuType = {
   title: string;
   iconClick: React.ElementType;
   iconNotClick: React.ElementType;
@@ -40,7 +40,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="flex justify-between px-5 py-2 h-[44px] bg-white">
+    <div className="md:hidden flex justify-between px-5 py-2 h-[44px] bg-white">
       {menus.map((res, i) => (
         <IconNavbar key={i} item={res} onClick={() => setMenuSelected(res.title)} />
       ))}

@@ -1,10 +1,10 @@
-import { Space, Typography } from 'antd';
-import React, { FunctionComponent } from 'react';
-import { BsBookmark, BsHeart, BsThreeDots } from 'react-icons/bs';
-import { BiMessageRounded } from 'react-icons/bi';
-import { FiSend } from 'react-icons/fi';
-import LikedBy from './likedBy';
+import React from 'react';
+import { Typography } from 'antd';
+import { FunctionComponent } from 'react';
+import { BsThreeDots } from 'react-icons/bs';
+import ActionPost from './actionPost';
 import Comment from './comment';
+import LikedBy from './likedBy';
 
 type CardType = {
   item: object | any;
@@ -26,21 +26,13 @@ const CardPost: FunctionComponent<CardType> = ({ item }) => {
           </Typography.Paragraph>
           <Typography.Paragraph className="text-[10px]">{item?.location}</Typography.Paragraph>
         </div>
-        <BsThreeDots />
+        <BsThreeDots className="cursor-pointer" />
       </div>
       <div className="w-auto h-[375px]">
         <img src={item?.images?.standard_resolution?.url} className="w-full h-full" />
       </div>
       <div className="px-3">
-        <div className="flex h-[36px] items-center justify-between">
-          <Space size="middle">
-            <BsHeart size={20} />
-            <BiMessageRounded size={20} />
-            <FiSend size={20} />
-          </Space>
-          <BsBookmark size={20} />
-        </div>
-
+        <ActionPost />
         <LikedBy item={item?.caption?.likes} />
         <Typography.Paragraph className="text-[12px] space-x-1 line-clamp-2">
           <Typography.Text className="text-[12px] font-bold">
