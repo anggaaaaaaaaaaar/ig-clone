@@ -39,9 +39,7 @@ const stories = () => {
       .then((res) => {
         setStories(res.data);
       })
-      .catch((err) => {
-        console.log('Errr ', err);
-      });
+      .catch(() => {});
   }, []);
 
   const onClickStory = (e: any) => {

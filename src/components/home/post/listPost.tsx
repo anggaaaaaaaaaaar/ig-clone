@@ -9,12 +9,10 @@ const ListPost = () => {
       .then(({ record }) => {
         setPostList(record?.data);
       })
-      .catch((err) => {
-        console.log('error ', err);
+      .catch(() => {
       });
   }, []);
 
-  console.log('post list ', postList);
 
   return (
     <div>

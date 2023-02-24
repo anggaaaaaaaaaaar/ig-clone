@@ -58,8 +58,6 @@ const apiRequest = async (props: ApiRequestInterface) => {
 
     return response.data;
   } catch (error: any) {
-    console.log('error ', error);
-
     throw error?.response;
   }
 };
